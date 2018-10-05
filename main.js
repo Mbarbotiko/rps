@@ -8,14 +8,22 @@ var cpuWins = 0
 
 //on this function the game starts, user will push a key down and we will get some action!
 
+function gameReset(){
+    wins = 0;
+    ties = 0;
+    gamesLeft = 10;
+    cpuWins=0;
+    youTheChamp = null
+}
+
 
 document.onkeyup = function (event) {
 
-    if (gamesLeft === 10) {
-        alert("you have" + gamesLeft + 'games left!')
-    } else {
-        alert('press a key to play again')
-    }
+    // if (gamesLeft === 10) {
+    //     alert("you have" + gamesLeft + 'games left!')
+    // } else {
+    //     alert('press a key to play again')
+    // }
 
    
     var userGuess = String.fromCharCode(event.which).toLowerCase();
@@ -24,8 +32,9 @@ document.onkeyup = function (event) {
     //computers guess willbe random, using math random (floor to get an integer without a decimal) random number the length of the computer choices array(3)
 
 
-    if ((userGuess === 'r') || (userGuess === 's') || (userGuess === 'p'))
+    if ((userGuess === 'r') || (userGuess === 's') || (userGuess === 'p')) 
     //if the user chooses any of the three letters start the game
+    
     {
         if ((userGuess === "r") && (computerGuess === "s")) {
             wins++;
@@ -42,6 +51,13 @@ document.onkeyup = function (event) {
         } else if (userGuess === computerGuess) {
             ties++;
         }
+        gamesLeft --
+
+        if (gamesLeft===0){
+            alert('game over ' + 'wins '+ wins +'ties '+ ties+ 'computerwins '+cpuWins)
+            gameReset();
+
+        }
 
     
     } else {
@@ -50,7 +66,7 @@ document.onkeyup = function (event) {
     }
 
 
-    // console.log(cpuWins)
+    console.log(gamesLeft)
     // console.log(ties)
     // console.log(wins)
 
