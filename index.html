@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-        <link rel="icon" href="" type="image/jpg" sizes="16x16">
+<link rel="icon" href="" type="image/jpg" sizes="16x16">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
-    
 
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
@@ -26,46 +27,97 @@
     <link rel="stylesheet" type="text/css" media="screen" href="640px.css">
 
 
-    
 
 
-  
+
+
 </head>
 
 <body>
 
-         <header>
-            
-             <nav>
+    <header>
+
+        <h1>Rock , Paper, Scissors</h1>
+
+        <!-- <nav>
      
                 
-            </nav>
-         
-     </header>
-         
+            </nav> -->
 
-<div class="container">
-
-    <section id="firstsection">
-         
+    </header>
 
 
-    </section>
+    <div class="main-container">
 
-  
-</div>
+        <section id="game-container">
+            <h1>Press R P or S to start playing!</h1>
+            <div>
+                <h1>Your Guess: </h1>
+            </div>
+            <div id="userguess">
+                <!--will hold the users guess once the key is pushed -->
+            </div>
 
-<footer>
+            <div>
+                <h1>Computers Guess:</h1>
+            </div>
+
+            <div id="computerguess">
+                <!--will hold the computers guess once the key is pushed -->
+            </div>
+
+            <div>
+                <h1>Your wins:</h1>
+            </div>
+
+            <div id="wins">
+                <!--will hold number of wins user has-->
+
+            </div>
+            <div>
+                <h1>Your Losses:</h1>
+            </div>
+            <div id="losses">
+                <!-- will hold number of losses user has-->
+
+            </div>
+            <div>
+                <h1> Number of Ties:</h1>
+            </div>
+            <div id="ties">
+                <!-- will hold number of ties-->
+
+            </div>
+            <div>
+                <h1>Number of Games Left:</h1>
+            </div>
+            <div id="gamecounter">
+                <!--will count down the number of games remaining-->
+
+            </div>
+            <div id="finalresult">
+                <!--will tell the user who the ultimate reigning champ was-->
+
+            </div>
 
 
-</footer>
 
 
-<script
-src="https://code.jquery.com/jquery-3.2.1.js"
-integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-crossorigin="anonymous"></script>
+        </section>
 
-<script src="main.js"></script>
+
+    </div>
+
+    <footer>
+
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
