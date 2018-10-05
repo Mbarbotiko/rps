@@ -17,15 +17,7 @@ function gameReset(){
 }
 
 
-document.onkeyup = function (event) {
-
-    // if (gamesLeft === 10) {
-    //     alert("you have" + gamesLeft + 'games left!')
-    // } else {
-    //     alert('press a key to play again')
-    // }
-
-   
+document.onkeyup = function (event) {   
     var userGuess = String.fromCharCode(event.which).toLowerCase();
     //captures user input and changes it to lowercase if they happened to enter it as uppercase
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
@@ -54,24 +46,26 @@ document.onkeyup = function (event) {
         gamesLeft --
 
         if (gamesLeft===0){
+            //evaluate number of games left if 0 alert the user game is over display results and reset the game
             alert('game over ' + 'wins '+ wins +'ties '+ ties+ 'computerwins '+cpuWins)
             gameReset();
 
         }
 
-    
     } else {
         alert("You have to choose R, S or P!")
         //if they dont alert them to choose the right letters
     }
 
+    var textUserChoice=document.getElementById('userguess').innerHTML = '<h1>'+userGuess+'</h1>'
+    var textCpuChoice = document.getElementById('computerguess').innerHTML = '<h1>'+computerGuess+'</h1>'
+    var textUserWins = document.getElementById('wins').innerHTML = '<h1>'+wins+'</h1>'
+    var textCpuWins = document.getElementById('cpuwins').innerHTML = '<h1>'+cpuWins+'</h1>'
+    var textTies = document.getElementById('ties').innerHTML = '<h1>'+ties+'</h1>'
+    var textGamesLeft= document.getElementById('gamecounter').innerHTML ='<h1>'+gamesLeft+'</h1>'
 
-    console.log(gamesLeft)
-    // console.log(ties)
-    // console.log(wins)
 
-
-
+    // var userText = document.getElementById('user').innerHTML = userGuess
 
 
 }
